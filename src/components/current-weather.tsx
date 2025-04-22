@@ -5,14 +5,14 @@ import type { WeatherData, GeocodingResponse } from "@/api/types";
 
 interface CurrentWeatherProps {
     data: WeatherData;
-    locationName: GeocodingResponse
+    locationName?: GeocodingResponse ;
 }
 const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
 
-    const { 
+    const {
         weather: [currentWeather],
         main: { temp, feels_like, temp_min, temp_max, humidity },
-        wind : { speed },
+        wind: { speed },
     } = data
 
     const formatTemp = (temp: number) => `${Math.round(temp)}°`;

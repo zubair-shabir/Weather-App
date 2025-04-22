@@ -33,9 +33,6 @@ export default function CityPage() {
   }
 
   if (!weatherQuery.data || !forecastQuery.data || !params.cityName) {
-    console.log("skeleton")
-    console.log(!weatherQuery.data, !forecastQuery.data, !params.cityName)
-    console.log(params.cityName)
     return <WeatherSkeleton />;
   }
 
@@ -53,7 +50,7 @@ export default function CityPage() {
       </div>
 
       <div className="grid gap-6">
-        <CurrentWeather data={weatherQuery.data} locationName={params.cityName} />
+        <CurrentWeather data={weatherQuery.data} />
         <HourlyTemperature data={forecastQuery.data} />
         <div className="grid gap-6 md:grid-cols-2 items-start">
           <WeatherDetails data={weatherQuery.data} />
