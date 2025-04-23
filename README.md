@@ -1,54 +1,105 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive weather application built with React and TypeScript that provides real-time weather information and forecasts. The app features a beautiful UI with dark mode support and interactive weather visualizations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time weather data display
+- Interactive weather charts using Recharts
+- Responsive design that works on desktop and mobile
+- Dark/Light mode theme support
+- Smooth animations and transitions
+- Weather forecast visualization
+- Modern and clean user interface
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- **React 19** - Frontend library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Build tool and development server
+- **React Router DOM** - Client-side routing
+- **TailwindCSS** - Utility-first CSS framework
+- **Radix UI** - Accessible component primitives
+- **React Query** - Data fetching and caching
+- **Recharts** - Weather data visualization
+- **Date-fns** - Date manipulation
+- **Lucide React** - Icons
+- **Sonner** - Toast notifications
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Development Tools
+- **ESLint** - Code linting
+- **TypeScript ESLint** - TypeScript-specific linting
+- **Vite** - Development server and bundler
+
+## Getting Started
+
+### Prerequisites
+- Node.js (LTS version recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd weatherapp
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Create a `.env` file in the root directory and add your environment variables
+```env
+VITE_API_KEY=your_weather_api_key
+```
+
+4. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Building for Production
+
+To create a production build:
+```bash
+npm run build
+# or
+yarn build
+```
+
+To preview the production build:
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Project Structure
+
+```
+weatherapp/
+├── src/               # Source files
+├── public/            # Static assets
+├── components.json    # Component configurations
+├── vite.config.ts    # Vite configuration
+├── tsconfig.json     # TypeScript configuration
+└── package.json      # Project dependencies
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
